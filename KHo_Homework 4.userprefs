@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Switches.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Keypad.cs" Line="55" Column="19" />
+      <File FileName="..\KHo_Homework 3 Final\Assets\Scripts\Mirror.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Collector.cs" Line="1" Column="19" />
+      <File FileName="Assets\Scripts\Switches.cs" Line="75" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
