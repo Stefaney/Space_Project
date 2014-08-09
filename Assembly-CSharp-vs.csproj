@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{C0D180FE-691C-0B95-ACA1-9668C5F89296}</ProjectGuid>
+	<ProjectGuid>{41EDB180-4EF4-5C05-0505-BAB4946684B4}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -48,6 +48,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Collector.cs" />
      <Compile Include="Assets\Scripts\Keypad.cs" />
+     <Compile Include="Assets\Scripts\PressurePlates.cs" />
+     <Compile Include="Assets\Scripts\RigidbodyControlForTestingOnly.cs" />
      <Compile Include="Assets\Scripts\Switches.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
