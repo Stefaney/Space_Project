@@ -5,7 +5,7 @@ public class RigidbodyControlForTestingOnly : MonoBehaviour {
 	// make variables public to edit in unity
 	// number in inspector will override the number here
 	float turnSpeed = 500f;
-	float moveSpeed = 750f;
+	float moveSpeed = 1000f;
 	
 	// Update is called once per frame
 	void Update() {
