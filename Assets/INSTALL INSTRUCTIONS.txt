@@ -1,0 +1,94 @@
+INSTRUCTIONS
+------------
+(1) All these puzzles use raycast
+(2) Make sure main camera is still tagged as "main camera" (default setting)
+(3) You may need to resize my models according to the room size in Maya
+(4) I added Crystal's materials and models in ROOM MODELS in ASSETS. Everything she had
+    on her github branch in the ASSETS folder on 8/9/2014 at 7:00PM is in there, 
+    including scripts
+
+
+SWITCH PUZZLE
+-------------
+(1) Add the SWITCHES script to any object, where you will easily find it
+(2) Place and size six copies of the SWITCH MERGED model anywhere in your scene
+(3) Make sure all the switches are pointing in the same direction (up or down)
+(4) Rename the switches 1-6 for your viewing and organizing convenience
+(5) Place and size two copies of the SCIFI DOOR model in your scene. Rename one of the 
+    doors as "entrance" Note: we can attach code to this door when we add the hallways
+(6) The other door is the "exit" door which only opens with the puzzle
+    Make sure you do NOT combine the pieces. There should be four:
+    (1) Door_Top
+    (2) Door_Right
+    (3) Door_Left
+    (4) Door_Frame (irrelevant)
+(7) Door_Top, Door_Right, Door_Left all need a MESH collider. Assign the colliders
+    to their corresponding names on the script component in the inspector
+(8) Add a MESH collider to each of the six switch models in your scene. Assign them in 
+    any order in the script component in the inspector. 
+(9) Click the arrow next to SWITCH ORDER in the script component in the inspector. Size
+    should already be listed as 6, but if not, put 6. 
+(10) Assign the six switch colliders in the order you please in the array SWITCH ORDER
+    in the inspector. **This will be the order the user will need to hit the switches 
+    in order to open the door**
+(11) If you need to see how it's done, see the SWITCH scene in EXAMPLES folder in ASSETS
+
+
+COLLECTOR PUZZLE
+----------------
+(1) Add the COLLECTOR script to any object, where you will easily find it
+(2) **Obtain the EYEBALL model and texture from Larry**
+(3) Place and size the KEYCARD SPLIT model and Larry's EYEBALL model anywhere in scene
+(4) **You need to split and regroup the KEYCARD SPLIT model into the RIGHT and LEFT parts
+    It has already been labelled as RIGHT or LEFT. Simply regroup them**
+(5) When you colour the KEYCARD SPLIT model, note there are 3 colourable parts: 
+    (1) The magnetic strip, which is a plane. Should probably be black
+    (2) The card itself
+    (3) The text "I.G.A" 
+(6) Don't forget to apply Larry's texture to the EYEBALL model
+(7) Add a MESH collider to Larry's EYEBALL model and the KEYCARD SPLIT models
+(8) Place and size two copies of the SCIFI DOOR model in your scene. Rename one of the 
+    doors as "entrance" Note: we can attach code to this door when we add the hallways
+(9) The other door is the "exit" door which only opens with the puzzle
+    Make sure you do NOT combine the pieces. There should be four:
+    (1) Door_Top
+    (2) Door_Right
+    (3) Door_Left
+    (4) Door_Frame (irrelevant)
+(10) Door_Top, Door_Right, Door_Left all need a MESH collider. Assign the colliders
+    to their corresponding names on the script component in the inspector
+(11) Assign PIECE ONE, PIECE TWO, and PIECE THREE in the script component in the inspector
+    to the RIGHT KEYCARD, LEFT KEYCARD, and EYEBALL. Order doesn't matter
+(12) If you need to see how it's done, see the COLLECTOR scene in EXAMPLES folder in ASSETS
+
+
+KEYCARD PUZZLE
+--------------
+(1) Add the KEYPAD script to any object, where you will easily find it
+(2) Place and size the KEYPAD model anywhere in your scene
+(3) When you colour the KEYPAD model, note there are lots of colourable parts:
+    (1) The keypad screen, a plane object labelled SCREEN in the prefab
+    (2) The keypad itself, labelled PAD in the prefab
+    (3) The face of the keys, 9 planes in total, each labelled as KEY_?_FACE
+    (4) The keys' numerical representation, 9 in total from 1-9, labelled  KEY_?_TEXT
+(4) **ONLY THE PAD NEEDS A MESH COLLIDER. NOTHING ELSE** Any other colliders in front of
+    the pad will interfere with the code and the puzzle will not work
+(5) Place and resize a 3D text in front of the screen
+(6) Place and size two copies of the SCIFI DOOR model in your scene. Rename one of the 
+    doors as "entrance" Note: we can attach code to this door when we add the hallways
+(7) The other door is the "exit" door which only opens with the puzzle
+    Make sure you do NOT combine the pieces. There should be four:
+    (1) Door_Top
+    (2) Door_Right
+    (3) Door_Left
+    (4) Door_Frame (irrelevant)
+(8) Door_Top, Door_Right, Door_Left all need a MESH collider. Assign the colliders
+    to their corresponding names on the script component in the inspector
+(9) Add KEYPAD NOISE .wav file from the SOUNDS folder to the same object you put the KEYPAD
+    script. **Make sure that you uncheck the 3D sound box before you add it as a component**
+(10) After adding KEYPAD NOISE, **uncheck the PLAY ON AWAKE box in the Audio Source
+    component**
+(11) Assign the 3d text to KEYPAD INPUT in the script component in the inspector
+(12) Assign the pad's collider to KEYPAD in the script component in the inspector
+(13) Input 4234 in CODE in the script component in the inspector
+(14) If you need to see how it's done, see the KEYPAD scene in th EXAMPLES folder in ASSETS
