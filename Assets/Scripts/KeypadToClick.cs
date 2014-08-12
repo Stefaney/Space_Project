@@ -1,17 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Keypad : MonoBehaviour {
-	bool onTry = false;
+public class KeypadToClick : MonoBehaviour {
 	bool grantAccess = false;
 	string textScreen = "";
 	string answer = "";
 	public TextMesh keypadInput;
 	public string code = "";
-	public Collider keypad;
 	public Collider doorTop;
 	public Collider doorLeft;
 	public Collider doorRight;
+	public Collider numberOne;
+	public Collider numberTwo;
+	public Collider numberThree;
+	public Collider numberFour;
+	public Collider numberFive;
+	public Collider numberSix;
+	public Collider numberSeven;
+	public Collider numberEight;
+	public Collider numberNine;
 
 	// Update is called once per frame
 	void Update () {
@@ -28,40 +35,31 @@ public class Keypad : MonoBehaviour {
 					doorLeft.gameObject.transform.Translate (0f, 0f, 2f);
 					doorRight.gameObject.transform.Translate (0f, 0f, 2f);
 				}
-			} else if (rayHit.collider == keypad) {
-				onTry = true;
-			}
-		}
-	
-		if (onTry == true) {
-			if (Input.GetKeyDown (KeyCode.Alpha0)) {
-				answer += "0";
-				audio.Play ();
-			} else if (Input.GetKeyDown (KeyCode.Alpha1)) {
+			} else if (rayHit.collider == numberOne) {
 				answer += "1";
 				audio.Play ();
-			} else if (Input.GetKeyDown (KeyCode.Alpha2)) {
+			} else if (rayHit.collider == numberTwo) {
 				answer += "2";
 				audio.Play ();
-			} else if (Input.GetKeyDown (KeyCode.Alpha3)) {
+			} else if (rayHit.collider == numberThree) {
 				answer += "3";
 				audio.Play ();
-			} else if (Input.GetKeyDown (KeyCode.Alpha4)) {
+			} else if (rayHit.collider == numberFour) {
 				answer += "4";
 				audio.Play ();
-			} else if (Input.GetKeyDown (KeyCode.Alpha5)) {
+			} else if (rayHit.collider == numberFive) {
 				answer += "5";
 				audio.Play ();
-			} else if (Input.GetKeyDown (KeyCode.Alpha6)) {
+			} else if (rayHit.collider == numberSix) {
 				answer += "6";
 				audio.Play ();
-			} else if (Input.GetKeyDown (KeyCode.Alpha7)) {
+			} else if (rayHit.collider == numberSeven) {
 				answer += "7";
 				audio.Play ();
-			} else if (Input.GetKeyDown (KeyCode.Alpha8)) {
+			} else if (rayHit.collider == numberEight) {
 				answer += "8";
 				audio.Play ();
-			} else if (Input.GetKeyDown (KeyCode.Alpha9)) {
+			} else if (rayHit.collider == numberNine) {
 				answer += "9";
 				audio.Play ();
 			}
@@ -72,7 +70,6 @@ public class Keypad : MonoBehaviour {
 
 		if (answer.Equals(code)) {
 			grantAccess = true;
-			onTry = false;
 		}
 
 		if (answer.Length == 4) { answer = ""; }

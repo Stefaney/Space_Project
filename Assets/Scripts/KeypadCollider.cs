@@ -1,10 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Keypad : MonoBehaviour {
+public class KeypadCollider : MonoBehaviour {
 	bool onTry = false;
 	bool grantAccess = false;
-	string textScreen = "";
+	bool openOnce = false;
 	string answer = "";
 	public TextMesh keypadInput;
 	public string code = "";
@@ -12,32 +12,17 @@ public class Keypad : MonoBehaviour {
 	public Collider doorTop;
 	public Collider doorLeft;
 	public Collider doorRight;
-
-	// Update is called once per frame
-	void Update () {
-		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-		RaycastHit rayHit =  new RaycastHit();
-
-		if (Physics.Raycast (ray, out rayHit, 1000f) && Input.GetMouseButtonDown(0)) {
-			if (rayHit.collider == doorTop || rayHit.collider == doorLeft || rayHit.collider == doorRight) {
-				if (grantAccess == false) {
-					textScreen = "";
-					textScreen += "You need an access code first.";
-				} else if (grantAccess == true) {
-					doorTop.gameObject.transform.Translate (0f, 4f, 0f);
-					doorLeft.gameObject.transform.Translate (0f, 0f, 2f);
-					doorRight.gameObject.transform.Translate (0f, 0f, 2f);
-				}
-			} else if (rayHit.collider == keypad) {
-				onTry = true;
-			}
-		}
 	
+	void OnTriggerEnter (Collider collided) {
+		if (collider == keypad) {
+			onTry = true;
+		}
+	}
+
+
+	void Update () {
 		if (onTry == true) {
-			if (Input.GetKeyDown (KeyCode.Alpha0)) {
-				answer += "0";
-				audio.Play ();
-			} else if (Input.GetKeyDown (KeyCode.Alpha1)) {
+			if (Input.GetKeyDown (KeyCode.Alpha1)) {
 				answer += "1";
 				audio.Play ();
 			} else if (Input.GetKeyDown (KeyCode.Alpha2)) {
@@ -66,15 +51,22 @@ public class Keypad : MonoBehaviour {
 				audio.Play ();
 			}
 		}
-
+		
 		keypadInput.text = "";
 		keypadInput.text = answer;
-
+		
 		if (answer.Equals(code)) {
 			grantAccess = true;
 			onTry = false;
 		}
 
+		if (grantAccess == true && openOnce == false) {
+			doorTop.gameObject.transform.Translate (0f, 25f, 0f);
+			doorLeft.gameObject.transform.Translate (0f, 0f, 20f);
+			doorRight.gameObject.transform.Translate (0f, 0f, 20f);
+			openOnce = true;
+		}
+		
 		if (answer.Length == 4) { answer = ""; }
 	}
 }
