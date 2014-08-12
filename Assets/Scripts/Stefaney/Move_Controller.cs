@@ -16,7 +16,7 @@ public class Move_Controller : MonoBehaviour
 	/// 
 	float bar = 100f;
 	Vector2 pos = new Vector2(20,40);
-	Vector2 size = new Vector2(60,20);
+	Vector2 size = new Vector2(100,20);
 	Texture2D emptyTex;
 	Texture2D fullTex;
 	float barPercent = 1f;

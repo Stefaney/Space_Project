@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Enemy_Move_Toward_Player : MonoBehaviour {
 
-	float max_distance_from_player = 50f; 
-	float distance_from_player_squared = 2500f;
+	float max_distance_from_player =40f; 
+	float distance_from_player_squared = 1600f;
 	GameObject player;
 	float rotationSpeed = 5f;
 	float moveSpeed = 7f;

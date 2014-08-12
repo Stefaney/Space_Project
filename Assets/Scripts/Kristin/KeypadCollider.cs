@@ -53,7 +53,7 @@ public class KeypadCollider : MonoBehaviour {
 			}
 		}
 		
-		keypadInput.text = "";
+		keypadInput.text = "Type Code";
 		keypadInput.text = answer;
 		
 		if (answer.Equals(code)) {
