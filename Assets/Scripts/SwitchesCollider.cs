@@ -20,21 +20,27 @@ public class SwitchesCollider : MonoBehaviour {
 
 	void OnTrigerEnter (Collider collided) {
 		if (collided == switchOne) {
+			collided.gameObject.transform.Rotate(Vector3.forward, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
 		} else if (collided == switchTwo) {
+			collided.gameObject.transform.Rotate(Vector3.forward, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
 		} else if (collided == switchThree) {
+			collided.gameObject.transform.Rotate(Vector3.forward, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
 		} else if (collided == switchFour) {
+			collided.gameObject.transform.Rotate(Vector3.forward, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
 		} else if (collided == switchFive) {
+			collided.gameObject.transform.Rotate(Vector3.forward, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
 		} else if (collided == switchSix) {
+			collided.gameObject.transform.Rotate(Vector3.forward, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
 		}
