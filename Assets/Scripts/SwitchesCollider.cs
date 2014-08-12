@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Switches : MonoBehaviour {
+public class SwitchesCollider : MonoBehaviour {
 	public Collider doorTop;
 	public Collider doorRight;
 	public Collider doorLeft;
@@ -18,7 +18,7 @@ public class Switches : MonoBehaviour {
 	int arrayIndex = 0;
 	string textScreen;
 
-	void OnTriggerEnter (Collider collided) {
+	void OnTrigerEnter (Collider collided) {
 		if (collided == switchOne) {
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
@@ -39,33 +39,8 @@ public class Switches : MonoBehaviour {
 			arrayIndex++;
 		}
 	}
-
+	
 	void Update () {
-		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-		RaycastHit rayHit =  new RaycastHit();
-		
-		if (Physics.Raycast (ray, out rayHit, 1000f) && Input.GetMouseButtonDown(0)) {
-			if (rayHit.collider == switchOne) {
-				switchAttempt[arrayIndex] = rayHit.collider;
-				arrayIndex++;
-			} else if (rayHit.collider == switchTwo) {
-				switchAttempt[arrayIndex] = rayHit.collider;
-				arrayIndex++;
-			} else if (rayHit.collider == switchThree) {
-				switchAttempt[arrayIndex] = rayHit.collider;
-				arrayIndex++;
-			} else if (rayHit.collider == switchFour) {
-				switchAttempt[arrayIndex] = rayHit.collider;
-				arrayIndex++;
-			} else if (rayHit.collider == switchFive) {
-				switchAttempt[arrayIndex] = rayHit.collider;
-				arrayIndex++;
-			} else if (rayHit.collider == switchSix) {
-				switchAttempt[arrayIndex] = rayHit.collider;
-				arrayIndex++;
-			}
-		}
-
 		if (switchOrder[0] == switchAttempt[0]) {
 			if (switchOrder[1] == switchAttempt[1]) {
 				if (switchOrder[2] == switchAttempt[2]) {
@@ -79,12 +54,12 @@ public class Switches : MonoBehaviour {
 		}
 
 		if (correctSwitches == true && openOnce == false) {
-			doorTop.gameObject.transform.Translate (0f, 50f, 0f);
-			doorLeft.gameObject.transform.Translate (0f, 0f, 100f);
-			doorRight.gameObject.transform.Translate (0f, 0f, 100f);
+			doorTop.gameObject.transform.Translate (0f, 25f, 0f);
+			doorLeft.gameObject.transform.Translate (0f, 0f, 20f);
+			doorRight.gameObject.transform.Translate (0f, 0f, 20f);
 			openOnce = true;
 		}
-
+		
 		if (arrayIndex == 6) {
 			arrayIndex = 0;
 		}

@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\PressurePlates.cs" />
      <Compile Include="Assets\Scripts\RigidbodyControlForTestingOnly.cs" />
      <Compile Include="Assets\Scripts\Switches.cs" />
+     <Compile Include="Assets\Scripts\SwitchesCollider.cs" />
      <Compile Include="Assets\Scripts\characterControl.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
