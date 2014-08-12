@@ -46,16 +46,32 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\SpawnPoints1.cs" />
-     <Compile Include="Assets\scripts\Controls.cs" />
-     <Compile Include="Assets\scripts\Credit.cs" />
-     <Compile Include="Assets\scripts\Story.cs" />
-     <Compile Include="Assets\scripts\Title.cs" />
-     <Compile Include="Assets\scripts\capsule.cs" />
-     <Compile Include="Assets\scripts\hoverbox.cs" />
-     <None Include="Assets\Standard Assets\Skyboxes\Textures\purplenebula\purplenebula.txt" />
+     <Compile Include="Assets\ControlsInstruction.cs" />
+     <Compile Include="Assets\SceneChangeToFive.cs" />
+     <Compile Include="Assets\SceneChangeToZero.cs" />
+     <Compile Include="Assets\scripts\Crystal\Capsule.cs" />
+     <Compile Include="Assets\scripts\Crystal\Controls.cs" />
+     <Compile Include="Assets\scripts\Crystal\Credit.cs" />
+     <Compile Include="Assets\scripts\Crystal\GameOver.cs" />
+     <Compile Include="Assets\scripts\Crystal\Riddle.cs" />
+     <Compile Include="Assets\scripts\Crystal\SpawnPoints1.cs" />
+     <Compile Include="Assets\scripts\Crystal\Story.cs" />
+     <Compile Include="Assets\scripts\Crystal\Title.cs" />
+     <Compile Include="Assets\scripts\Crystal\hoverbox.cs" />
+     <Compile Include="Assets\scripts\Crystal\sceneChangeToFive.cs" />
+     <Compile Include="Assets\scripts\Crystal\sceneChangeToOne.cs" />
+     <Compile Include="Assets\scripts\Crystal\sceneChangeToSix.cs" />
+     <Compile Include="Assets\scripts\Kristin\Collector.cs" />
+     <Compile Include="Assets\scripts\Kristin\KeypadCollider.cs" />
+     <Compile Include="Assets\scripts\Kristin\KeypadScript.cs" />
+     <Compile Include="Assets\scripts\Kristin\Plates.cs" />
+     <Compile Include="Assets\scripts\Kristin\Switches.cs" />
+     <Compile Include="Assets\scripts\Larry\EnemyMovement.cs" />
+     <Compile Include="Assets\scripts\Stefaney\Enemy_Move_Toward_Player.cs" />
+     <Compile Include="Assets\scripts\Stefaney\Move_Controller.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
-     <None Include="Assets\Standard Assets\Skyboxes\Textures\purplenebula\Note.txt" />
+     <None Include="Assets\Materials\space_age\Space.txt" />
+     <None Include="Assets\INSTALL INSTRUCTIONS.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
