@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\KeypadCollider.cs" />
      <Compile Include="Assets\Scripts\KeypadToClick.cs" />
      <Compile Include="Assets\Scripts\PressurePlates.cs" />
+     <Compile Include="Assets\Scripts\PressurePlatesNoOrder.cs" />
      <Compile Include="Assets\Scripts\RigidbodyControlForTestingOnly.cs" />
      <Compile Include="Assets\Scripts\Switches.cs" />
      <Compile Include="Assets\Scripts\SwitchesCollider.cs" />

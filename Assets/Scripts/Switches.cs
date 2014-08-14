@@ -18,49 +18,33 @@ public class Switches : MonoBehaviour {
 	int arrayIndex = 0;
 	string textScreen;
 
-	void OnTriggerEnter (Collider collided) {
-		if (collided == switchOne) {
-			switchAttempt[arrayIndex] = collided;
-			arrayIndex++;
-		} else if (collided == switchTwo) {
-			switchAttempt[arrayIndex] = collided;
-			arrayIndex++;
-		} else if (collided == switchThree) {
-			switchAttempt[arrayIndex] = collided;
-			arrayIndex++;
-		} else if (collided == switchFour) {
-			switchAttempt[arrayIndex] = collided;
-			arrayIndex++;
-		} else if (collided == switchFive) {
-			switchAttempt[arrayIndex] = collided;
-			arrayIndex++;
-		} else if (collided == switchSix) {
-			switchAttempt[arrayIndex] = collided;
-			arrayIndex++;
-		}
-	}
-
 	void Update () {
 		Ray ray = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit rayHit =  new RaycastHit();
 		
 		if (Physics.Raycast (ray, out rayHit, 1000f) && Input.GetMouseButtonDown(0)) {
 			if (rayHit.collider == switchOne) {
+				rayHit.collider.gameObject.transform.Rotate(Vector3.up, 180f);
 				switchAttempt[arrayIndex] = rayHit.collider;
 				arrayIndex++;
 			} else if (rayHit.collider == switchTwo) {
+				rayHit.collider.gameObject.transform.Rotate(Vector3.up, 180f);
 				switchAttempt[arrayIndex] = rayHit.collider;
 				arrayIndex++;
 			} else if (rayHit.collider == switchThree) {
+				rayHit.collider.gameObject.transform.Rotate(Vector3.up, 180f);
 				switchAttempt[arrayIndex] = rayHit.collider;
 				arrayIndex++;
 			} else if (rayHit.collider == switchFour) {
+				rayHit.collider.gameObject.transform.Rotate(Vector3.up, 180f);
 				switchAttempt[arrayIndex] = rayHit.collider;
 				arrayIndex++;
 			} else if (rayHit.collider == switchFive) {
+				rayHit.collider.gameObject.transform.Rotate(Vector3.up, 180f);
 				switchAttempt[arrayIndex] = rayHit.collider;
 				arrayIndex++;
 			} else if (rayHit.collider == switchSix) {
+				rayHit.collider.gameObject.transform.Rotate(Vector3.up, 180f);
 				switchAttempt[arrayIndex] = rayHit.collider;
 				arrayIndex++;
 			}

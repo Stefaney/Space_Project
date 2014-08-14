@@ -11,38 +11,66 @@ public class SwitchesCollider : MonoBehaviour {
 	public Collider switchFour;
 	public Collider switchFive;
 	public Collider switchSix;
+	public Collider reset;
 	public Collider[] switchOrder = new Collider[6];
 	Collider[] switchAttempt = new Collider[6];
 	bool correctSwitches = false;
 	bool openOnce = false;
+	bool isHitOne = false;
+	bool isHitTwo = false;
+	bool isHitThree = false;
+	bool isHitFour = false;
+	bool isHitFive = false;
+	bool isHitSix = false;
 	int arrayIndex = 0;
 	string textScreen;
 
-	void OnTrigerEnter (Collider collided) {
-		if (collided == switchOne) {
-			collided.gameObject.transform.Rotate(Vector3.forward, 180f);
+	void OnTriggerEnter (Collider collided) {
+		Debug.Log("collided.");
+		if (collided == switchOne && isHitOne == false) {
+			collided.gameObject.transform.Rotate(Vector3.up, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
-		} else if (collided == switchTwo) {
-			collided.gameObject.transform.Rotate(Vector3.forward, 180f);
+			isHitOne = true;
+		} else if (collided == switchTwo && isHitTwo == false) {
+			collided.gameObject.transform.Rotate(Vector3.up, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
-		} else if (collided == switchThree) {
-			collided.gameObject.transform.Rotate(Vector3.forward, 180f);
+			isHitTwo = true;
+		} else if (collided == switchThree && isHitThree == false) {
+			collided.gameObject.transform.Rotate(Vector3.up, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
-		} else if (collided == switchFour) {
-			collided.gameObject.transform.Rotate(Vector3.forward, 180f);
+			isHitThree = true;
+		} else if (collided == switchFour && isHitFour == false) {
+			collided.gameObject.transform.Rotate(Vector3.up, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
-		} else if (collided == switchFive) {
-			collided.gameObject.transform.Rotate(Vector3.forward, 180f);
+			isHitFour = true;
+		} else if (collided == switchFive && isHitFive == false) {
+			collided.gameObject.transform.Rotate(Vector3.up, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
-		} else if (collided == switchSix) {
-			collided.gameObject.transform.Rotate(Vector3.forward, 180f);
+			isHitFive = true;
+		} else if (collided == switchSix && isHitSix == false) {
+			collided.gameObject.transform.Rotate(Vector3.up, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
+			isHitSix = true;
+		} else if (collided == reset && arrayIndex == 6) {
+			arrayIndex = 0;
+			switchOne.gameObject.transform.Rotate (Vector3.up, 180f);
+			switchTwo.gameObject.transform.Rotate (Vector3.up, 180f);
+			switchThree.gameObject.transform.Rotate (Vector3.up, 180f);
+			switchFour.gameObject.transform.Rotate (Vector3.up, 180f);
+			switchFive.gameObject.transform.Rotate (Vector3.up, 180f);
+			switchSix.gameObject.transform.Rotate (Vector3.up, 180f);
+			isHitOne = false;
+			isHitTwo = false;
+			isHitThree = false;
+			isHitFour = false;
+			isHitFive = false;
+			isHitSix = false;
 		}
 	}
 	
@@ -60,14 +88,10 @@ public class SwitchesCollider : MonoBehaviour {
 		}
 
 		if (correctSwitches == true && openOnce == false) {
-			doorTop.gameObject.transform.Translate (0f, 25f, 0f);
-			doorLeft.gameObject.transform.Translate (0f, 0f, 20f);
-			doorRight.gameObject.transform.Translate (0f, 0f, 20f);
+			doorTop.gameObject.transform.Translate (0f, 100f, 0f);
+			doorLeft.gameObject.transform.Translate (0f, 0f, 50f);
+			doorRight.gameObject.transform.Translate (0f, 0f, 50f);
 			openOnce = true;
-		}
-		
-		if (arrayIndex == 6) {
-			arrayIndex = 0;
 		}
 	}
 }
