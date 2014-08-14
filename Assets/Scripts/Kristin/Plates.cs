@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Plates : MonoBehaviour {
+public class Plates: MonoBehaviour {
 	bool grantAccess = false;
 	public Collider doorTop;
 	public Collider doorLeft;
@@ -49,9 +49,9 @@ public class Plates : MonoBehaviour {
 		}
 		
 		if (grantAccess == true && openOnce == false) {
-			doorTop.gameObject.transform.Translate (0f, 2f, 0f);
-			doorLeft.gameObject.transform.Translate (0f, 0f, 2f);
-			doorRight.gameObject.transform.Translate (0f, 0f, 2f);
+			doorTop.gameObject.transform.Translate (0f, 100f, 0f);
+			doorLeft.gameObject.transform.Translate (0f, 0f, 100f);
+			doorRight.gameObject.transform.Translate (0f, 0f, 100f);
 			openOnce = true;
 		}
 	}

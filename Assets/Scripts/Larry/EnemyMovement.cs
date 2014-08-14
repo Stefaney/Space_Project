@@ -13,7 +13,7 @@ public class EnemyMovement : MonoBehaviour {
 	
 	GameObject player;
 	float rotationSpeed = 5f;
-	float moveSpeed = 10f;
+	float moveSpeed = 8f;
 	
 	// Use this for initialization
 	void Start () {

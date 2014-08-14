@@ -11,7 +11,7 @@ public class Riddle : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		GetComponent <TextMesh> ().text = 
+		GetComponent <TextMesh> ().text =
 			"Rescue your little sister and \n\n" +
 			"leave this spaceship through the exit\n\n" +
 			"Your flashlight will stop anything \n\n" +

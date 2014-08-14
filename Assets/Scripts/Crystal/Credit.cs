@@ -2,23 +2,27 @@
 using System.Collections;
 
 public class Credit : MonoBehaviour {
-
+	public TextMesh toView;
+	string textScreen;
+	
 	void OnGUI (){
-	
-	
-		if(GUI.Button (new Rect(380,300,150,30), "Main Menu")){
+		textScreen = "";
+		textScreen = "" +
+			"Crystal  | girl model, keypad puzzle room, girl's room,\n" +
+			"          main menu\n\n" +
+			"Kristin   | switch model + code, keypad model + code,\n" +
+			"          door model, keycard model + code, main menu,\n" +
+			"          main menu bg\n\n" +
+			"Stefaney | reset button model, player controller code,\n" +
+			"          boo code, health bar code, first aid kit +\n" +
+			"          code, keycard puzzle room, keycard code\n\n" +
+			"Larry    | eyeball model, boo code, boo + evil boo" +
+			"          model, switch puzzle room, enemy code";
+		
+		toView.text = textScreen;
+		if(GUI.Button (new Rect(500,650,150,30), "Main Menu")){
 			Application.LoadLevel (0);			
 		}
-		
-		
-		
-		
-		
-		
-		
+
 	}
-
-
-
-
 }
