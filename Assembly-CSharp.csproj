@@ -47,6 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Collector.cs" />
+     <Compile Include="Assets\Scripts\Crystal\Controls.cs" />
+     <Compile Include="Assets\Scripts\Crystal\GameOver.cs" />
+     <Compile Include="Assets\Scripts\Crystal\Riddle.cs" />
+     <Compile Include="Assets\Scripts\Crystal\Story.cs" />
+     <Compile Include="Assets\Scripts\Crystal\TitleScreen.cs" />
      <Compile Include="Assets\Scripts\Keypad.cs" />
      <Compile Include="Assets\Scripts\KeypadCollider.cs" />
      <Compile Include="Assets\Scripts\KeypadToClick.cs" />
@@ -55,7 +60,11 @@
      <Compile Include="Assets\Scripts\RigidbodyControlForTestingOnly.cs" />
      <Compile Include="Assets\Scripts\Switches.cs" />
      <Compile Include="Assets\Scripts\SwitchesCollider.cs" />
+     <Compile Include="Assets\Scripts\Victory.cs" />
      <Compile Include="Assets\Scripts\characterControl.cs" />
+     <None Include="Assets\Fonts\readme.txt" />
+     <None Include="Assets\Fonts\Space.txt" />
+     <None Include="Assets\Fonts\license.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
