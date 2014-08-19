@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SceneChangeToPrison : MonoBehaviour {
+public class SceneChangeToZeros : MonoBehaviour {
 
 
 	void OnTriggerEnter() {
-		Application.LoadLevel (9);
+		Application.LoadLevel (0);
 	}
 
 }
