@@ -72,6 +72,7 @@
      <Compile Include="Assets\Scripts\Stefaney\Enemy_Move_Toward_Player.cs" />
      <Compile Include="Assets\Scripts\Stefaney\ParentScript.cs" />
      <Compile Include="Assets\Scripts\Stefaney\Player_Controller.cs" />
+     <Compile Include="Assets\Scripts\Stefaney\SceneChangetoPrison.cs" />
      <Compile Include="Assets\Scripts\SwitchesCollider.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Materials\space_age\Space.txt" />
