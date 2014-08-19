@@ -22,7 +22,7 @@ public class Story : MonoBehaviour {
 			"you must get to the escape pod.\n\nGood luck.";
 
 		toView.text = textScreen;
-		if(GUI.Button (new Rect(500,650,150,30), "Main Menu")){
+		if(GUI.Button (new Rect(400,500,150,30), "Main Menu")){
 			Application.LoadLevel (0);			
 		}
 		

@@ -1,15 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SceneChangeToZero : MonoBehaviour {
+public class SceneChangeToPrison : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+
+	void OnTriggerEnter() {
+		Application.LoadLevel (9);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }

@@ -17,10 +17,10 @@ public class Credit : MonoBehaviour {
 			"          boo code, health bar code, first aid kit +\n" +
 			"          code, keycard puzzle room, keycard code\n\n" +
 			"Larry    | eyeball model, boo code, boo + evil boo" +
-			"          model, switch puzzle room, enemy code";
+			"          \nmodel, switch puzzle room, enemy code";
 		
 		toView.text = textScreen;
-		if(GUI.Button (new Rect(500,650,150,30), "Main Menu")){
+		if(GUI.Button (new Rect(400,500,150,30), "Main Menu")){
 			Application.LoadLevel (0);			
 		}
 

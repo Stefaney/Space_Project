@@ -13,6 +13,15 @@ public class KeypadCollider : MonoBehaviour {
 	public Collider doorLeft;
 	public Collider doorRight;
 
+	AudioSource KeyPad;
+	AudioSource Door;
+
+	void Start(){
+
+		AudioSource[] audioList = GetComponents<AudioSource>();
+		KeyPad = audioList[0];
+		Door = audioList[1];
+	}
 	
 	void OnTriggerEnter (Collider collided) {
 		if (collider == keypad) {
@@ -25,31 +34,31 @@ public class KeypadCollider : MonoBehaviour {
 		if (onTry == true) {
 			if (Input.GetKeyDown (KeyCode.Alpha1)) {
 				answer += "1";
-				audio.Play ();
+				KeyPad.Play ();
 			} else if (Input.GetKeyDown (KeyCode.Alpha2)) {
 				answer += "2";
-				audio.Play ();
+				KeyPad.Play ();
 			} else if (Input.GetKeyDown (KeyCode.Alpha3)) {
 				answer += "3";
-				audio.Play ();
+				KeyPad.Play ();
 			} else if (Input.GetKeyDown (KeyCode.Alpha4)) {
 				answer += "4";
-				audio.Play ();
+				KeyPad.Play ();
 			} else if (Input.GetKeyDown (KeyCode.Alpha5)) {
 				answer += "5";
-				audio.Play ();
+				KeyPad.Play ();
 			} else if (Input.GetKeyDown (KeyCode.Alpha6)) {
 				answer += "6";
-				audio.Play ();
+				KeyPad.Play ();
 			} else if (Input.GetKeyDown (KeyCode.Alpha7)) {
 				answer += "7";
-				audio.Play ();
+				KeyPad.Play ();
 			} else if (Input.GetKeyDown (KeyCode.Alpha8)) {
 				answer += "8";
-				audio.Play ();
+				KeyPad.Play ();
 			} else if (Input.GetKeyDown (KeyCode.Alpha0)) {
 				answer += "0";
-				audio.Play ();
+				KeyPad.Play ();
 			}
 		}
 		
@@ -62,6 +71,7 @@ public class KeypadCollider : MonoBehaviour {
 		}
 		
 		if (grantAccess == true && openOnce == false) {
+			Door.Play();
 			doorTop.gameObject.transform.Translate (0f, 25f, 0f);
 			doorLeft.gameObject.transform.Translate (0f, 0f, 20f);
 			doorRight.gameObject.transform.Translate (0f, 0f, 20f);

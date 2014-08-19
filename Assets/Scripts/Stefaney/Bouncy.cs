@@ -15,7 +15,7 @@ public class Bouncy : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		transform.position = startPosition + transform.up * Mathf.Sin(Time.time ) * 40f;
+		transform.position = startPosition + transform.up * Mathf.Sin(Time.time ) * 60f;
 	
 	}
 }

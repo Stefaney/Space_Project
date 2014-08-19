@@ -46,7 +46,7 @@ public class Player_Controller : MonoBehaviour
 
 		if (openClose){
 
-			GUI.Label(new Rect (Screen.width/2f,Screen.height/2f,80,100),"You need three keypeices to open the door");
+			GUI.Label(new Rect (Screen.width/2f,Screen.height/2f,80,100),"You need 6 keypeices to open the door");
 		}
 
 	}
@@ -99,8 +99,7 @@ public class Player_Controller : MonoBehaviour
 			if (totalHealth > 20 ){
 
 				totalHealth -= 10;
-				//HealthBar.transform.localScale = new Vector3(HealthBar.transform.localScale.x, HealthBar.transform.localScale.y, 
-				                                             //Mathf.Lerp(1,totalHealth/maxHealth,totalHealth/maxHealth*10f));
+				   
 				bar = totalHealth;
 
 
@@ -109,11 +108,11 @@ public class Player_Controller : MonoBehaviour
 			else if (totalHealth == 20 || totalHealth == 10){
 
 				totalHealth -= 10;
-				//HealthBar.transform.renderer.material.color = Color.red;
+
 				bar = totalHealth;
 			}
 			else {
-				//HealthBar.gameObject.SetActive(false);
+			
 				Application.LoadLevel(6);
 				Debug.Log ("You died");
 
@@ -122,7 +121,8 @@ public class Player_Controller : MonoBehaviour
 		}
 		else if (collide.tag == "Medikit"){
 
-			//HealthBar.transform.localScale = originalHealthTransform;
+
+			pickupPuzzle.Play();
 			totalHealth = 100;
 			bar = totalHealth;
 			Destroy(collide.gameObject);
@@ -135,14 +135,14 @@ public class Player_Controller : MonoBehaviour
 
 		}
 		else if (collide.tag == "Box") {
-		   if (puzzleCounter == 3)
+		   if (puzzleCounter == 6)
 			{
 			doorOpen.Play();
 			openClose = false;
-			doorTop.gameObject.transform.Translate (0f, 8f, 0f);
-			doorLeft.gameObject.transform.Translate (0f, 0f, 4f);
-			doorRight.gameObject.transform.Translate (0f, 0f, 4f);
-			Application.LoadLevel(0);
+			doorTop.gameObject.transform.Translate (0f, 16f, 0f);
+			doorLeft.gameObject.transform.Translate (0f, 0f, 8f);
+			doorRight.gameObject.transform.Translate (0f, 0f, 8f);
+			Application.LoadLevel(8);
 
 			}
 			else {
@@ -155,6 +155,18 @@ public class Player_Controller : MonoBehaviour
 			openClose = true;
 
 
+		}
+		else if (collide.tag == "Prison"){
+			doorOpen.Play ();
+			doorTop.gameObject.transform.Translate (0f, 16f, 0f);
+			doorLeft.gameObject.transform.Translate (0f, 0f, 8f);
+			doorRight.gameObject.transform.Translate (0f, 0f, 8f);
+
+
+		}
+		else if (collide.tag == "Escape"){
+			pickupPuzzle.Play();
+			Application.LoadLevel(10);
 		}
 
 	}
