@@ -13,7 +13,9 @@ public class SwitchesCollider : MonoBehaviour {
 	public Collider switchSix;
 	public Collider reset;
 	public Collider[] switchOrder = new Collider[6];
-	public AudioSource doorExit;
+
+	AudioSource doorExit;
+	AudioSource SwitchSound;
 	Collider[] switchAttempt = new Collider[6];
 	bool correctSwitches = false;
 	bool openOnce = false;
@@ -26,46 +28,54 @@ public class SwitchesCollider : MonoBehaviour {
 	int arrayIndex = 0;
 	string textScreen;
 
+	void Start(){
+
+		AudioSource[] audioList = GetComponents<AudioSource>();
+		SwitchSound = audioList[3];
+		doorExit = audioList[1];
+	}
+
 	void OnTriggerEnter (Collider collided) {
 		if (collided == switchOne && isHitOne == false) {
 			collided.gameObject.transform.Rotate(Vector3.up, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
-			audio.Play ();
+			SwitchSound.Play ();
 			isHitOne = true;
+			Debug.Log("Triggering");
 		
 		} else if (collided == switchTwo && isHitTwo == false) {
 			collided.gameObject.transform.Rotate(Vector3.up, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
-			audio.Play ();
+			SwitchSound.Play ();
 			isHitTwo = true;
 		} else if (collided == switchThree && isHitThree == false) {
 			collided.gameObject.transform.Rotate(Vector3.up, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
-			audio.Play ();
+			SwitchSound.Play ();
 			isHitThree = true;
 		} else if (collided == switchFour && isHitFour == false) {
 			collided.gameObject.transform.Rotate(Vector3.up, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
-			audio.Play ();
+			SwitchSound.Play ();
 			isHitFour = true;
 		} else if (collided == switchFive && isHitFive == false) {
 			collided.gameObject.transform.Rotate(Vector3.up, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
-			audio.Play ();
+			SwitchSound.Play ();
 			isHitFive = true;
 		} else if (collided == switchSix && isHitSix == false) {
 			collided.gameObject.transform.Rotate(Vector3.up, 180f);
 			switchAttempt[arrayIndex] = collided;
 			arrayIndex++;
-			audio.Play ();
+			SwitchSound.Play ();
 			isHitSix = true;
 		} else if (collided == reset) {
-			Debug.Log("reset");
+			SwitchSound.Play ();
 			arrayIndex = 0;
 			if (isHitOne == true) { switchOne.gameObject.transform.Rotate (Vector3.up, 180f); }
 			if (isHitTwo == true) { switchTwo.gameObject.transform.Rotate (Vector3.up, 180f); }
@@ -101,7 +111,7 @@ public class SwitchesCollider : MonoBehaviour {
 			doorRight.gameObject.transform.Translate (0f, 0f, 50f);
 			openOnce = true;
 			doorExit.Play ();
-			Debug.Log ("door has been opened");
+
 		}
 	}
 }

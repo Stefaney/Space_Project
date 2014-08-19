@@ -10,16 +10,17 @@ public class SpawnPoints1: MonoBehaviour {
 	//indicate your monsters
 	public Transform Monster1, Monster2, Monster3;
 
+
 	//make an array for the spawnpoints
 	public Transform [] SpawnPoints= new Transform [16];
 
 
 	void Start (){
 	
-	//initial count=0, put this before while loop
-	int monsterCount = 0;
 
-	while (monsterCount<5) {
+
+		for (int i = 0; i < 5 ; i++) {
+
 	
 		int monsterNumber = Random.Range (0, 3);
 		//shoudln't the range be 0,2? monster3 won't show up unless it's 0,3. ASK
@@ -38,10 +39,10 @@ public class SpawnPoints1: MonoBehaviour {
 			}
 
 		//spawn them at the location of random spawn points!!!!!!
-		Instantiate (monsterToSpawn, SpawnPoints [Random.Range (0, 16)].transform.position, Quaternion.identity);
+		Instantiate (monsterToSpawn, SpawnPoints [Random.Range (0, 15)].transform.position, Quaternion.identity);
 		
 		// now add a count and a while-loop to spawn two monsters in the room
-		monsterCount ++;
+		
 
 	}//while-loop
 	

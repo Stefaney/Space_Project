@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{4C837835-EB9F-2B16-99D5-175C2308E1B3}</ProjectGuid>
+	<ProjectGuid>{41EDB180-4EF4-5C05-0505-BAB4946684B4}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -19,7 +19,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_2;UNITY_4_5;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_1;UNITY_4_5;UNITY_STANDALONE_OSX;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;UNITY_STANDALONE;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_MOVIES;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_DUCK_TYPING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -46,37 +46,42 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\scripts\Crystal\Capsule.cs" />
-     <Compile Include="Assets\scripts\Crystal\Controls.cs" />
-     <Compile Include="Assets\scripts\Crystal\Credit.cs" />
-     <Compile Include="Assets\scripts\Crystal\GameOver.cs" />
-     <Compile Include="Assets\scripts\Crystal\Riddle.cs" />
-     <Compile Include="Assets\scripts\Crystal\SceneChangeToZero.cs" />
-     <Compile Include="Assets\scripts\Crystal\ScenechangeToSeven.cs" />
-     <Compile Include="Assets\scripts\Crystal\SpawnPoints1.cs" />
-     <Compile Include="Assets\scripts\Crystal\Story.cs" />
-     <Compile Include="Assets\scripts\Crystal\TitleScreen.cs" />
-     <Compile Include="Assets\scripts\Crystal\hoverbox.cs" />
-     <Compile Include="Assets\scripts\Crystal\sceneChangeToFive.cs" />
-     <Compile Include="Assets\scripts\Crystal\sceneChangeToOne.cs" />
-     <Compile Include="Assets\scripts\Crystal\sceneChangeToSix.cs" />
-     <Compile Include="Assets\scripts\Kristin\Collector.cs" />
-     <Compile Include="Assets\scripts\Kristin\KeypadCollider.cs" />
-     <Compile Include="Assets\scripts\Kristin\KeypadScript.cs" />
-     <Compile Include="Assets\scripts\Kristin\Plates.cs" />
-     <Compile Include="Assets\scripts\Kristin\Switches.cs" />
-     <Compile Include="Assets\scripts\Larry\EnemyMovement.cs" />
-     <Compile Include="Assets\scripts\Stefaney\Bouncy.cs" />
-     <Compile Include="Assets\scripts\Stefaney\Enemy_Move_Toward_Player.cs" />
-     <Compile Include="Assets\scripts\Stefaney\Player_Controller.cs" />
+     <Compile Include="Assets\Scripts\Crystal\Capsule.cs" />
+     <Compile Include="Assets\Scripts\Crystal\Controls.cs" />
+     <Compile Include="Assets\Scripts\Crystal\Credit.cs" />
+     <Compile Include="Assets\Scripts\Crystal\GameOver.cs" />
+     <Compile Include="Assets\Scripts\Crystal\Riddle.cs" />
+     <Compile Include="Assets\Scripts\Crystal\SceneChangeToZero.cs" />
+     <Compile Include="Assets\Scripts\Crystal\ScenechangeToSeven.cs" />
+     <Compile Include="Assets\Scripts\Crystal\SpawnPoints1.cs" />
+     <Compile Include="Assets\Scripts\Crystal\SpawnPoints2.cs" />
+     <Compile Include="Assets\Scripts\Crystal\SpawnPoints3.cs" />
+     <Compile Include="Assets\Scripts\Crystal\Story.cs" />
+     <Compile Include="Assets\Scripts\Crystal\TitleScreen.cs" />
+     <Compile Include="Assets\Scripts\Crystal\hoverbox.cs" />
+     <Compile Include="Assets\Scripts\Crystal\sceneChangeToFive.cs" />
+     <Compile Include="Assets\Scripts\Crystal\sceneChangeToOne.cs" />
+     <Compile Include="Assets\Scripts\Crystal\sceneChangeToSix.cs" />
+     <Compile Include="Assets\Scripts\Kristin\KeypadCollider.cs" />
+     <Compile Include="Assets\Scripts\Kristin\KeypadScript.cs" />
+     <Compile Include="Assets\Scripts\Kristin\Plates.cs" />
+     <Compile Include="Assets\Scripts\Kristin\Victory.cs" />
+     <Compile Include="Assets\Scripts\Larry\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\SpawnPoints4.cs" />
+     <Compile Include="Assets\Scripts\Stefaney\Bouncy.cs" />
+     <Compile Include="Assets\Scripts\Stefaney\Enemy_Move_Toward_Player.cs" />
+     <Compile Include="Assets\Scripts\Stefaney\ParentScript.cs" />
+     <Compile Include="Assets\Scripts\Stefaney\Player_Controller.cs" />
+     <Compile Include="Assets\Scripts\SwitchesCollider.cs" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Materials\space_age\Space.txt" />
+     <None Include="Assets\Materials\RimLight.shader" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{2F531448-ED64-C56B-0D97-EB6FC6B90976}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+      <Project>{E3E8296F-9F6F-6B46-8182-C112F4EC3B47}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
-      <Project>{650F9A18-A871-0D49-7581-AA6658C2F792}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
+      <Project>{CF3072E3-7268-9C30-2CC8-E2B331D1EBA4}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -79,7 +79,7 @@ public class EnemyMovement : MonoBehaviour {
 			
 			cuteBoo.gameObject.SetActive (false);
 			terrorBoo.gameObject.SetActive (true);
-			moveSpeed = 10f;
+			moveSpeed = 8f;
 		}
 	}
 }
