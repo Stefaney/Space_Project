@@ -1,15 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Crystal/SceneChangeToZero.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Unity/Week01c/Terrain/Assets/TextScript.cs">
     <Files>
-      <File FileName="Assets/Scripts/Stefaney/Player_Controller.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Crystal/SpawnPoints1.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Crystal/SpawnPoints2.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Crystal/SpawnPoints3.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Kristin/Victory.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/SwitchesCollider.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Crystal/TitleScreen.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Crystal/SceneChangeToZero.cs" Line="8" Column="27" />
+      <File FileName="../Unity/Week01c/Terrain/Assets/TextScript.cs" Line="1" Column="1" />
+      <File FileName="../Unity/Week01c/Terrain/Assets/TextScript.cs" Line="1" Column="1" />
+      <File FileName="../Javascript/JSAssign1/app.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
