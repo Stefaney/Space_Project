@@ -16,7 +16,7 @@ The story is:
 		Your objective is to get your sister and escape to the escape pod. Both of
 		you must get to the escape pod. Good luck.
 
-Hint for the first level: Type in the code by rather than click on the keypad with your mouse.
+Hint for the first level: Type in the code by the door rather than click on the keypad with your mouse.
 
 Here's a playable version:
 https://8431e082444ff18ee9b8cac610b22a7e03132f90.googledrive.com/host/0B9MbIDpajF8FZU1WQ1NXb1lmNGM/Space_Project_Web.html
